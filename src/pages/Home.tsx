@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import './home.css';
+import LichessEmbed from '../components/lessons/LichessEmbed';
+import LessonProgressTracker from '../components/lessons/LessonProgressTracker';
+import EmailSignupForm from '../components/common/EmailSignupForm';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 const Home: React.FC = () => {
+  const { trackPageView } = useAnalytics();
+  
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('home');
+  }, [trackPageView]);
+
   const { elementRef: statsRef, isVisible: statsVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -123,6 +134,42 @@ const Home: React.FC = () => {
     { icon: '🏁', value: '50+', label: 'Endgames', color: '#f093fb' },
     { icon: '📚', value: '100+', label: 'Resources', color: '#4facfe' },
     { icon: '🎯', value: '24/7', label: 'Available', color: '#43e97b' }
+  ];
+
+  // Demo state for Lichess embed
+  const [lichessUrl, setLichessUrl] = React.useState('https://lichess.org/study/embed/4FvLwQpB');
+  // Enhanced sample lessons for progress tracker
+  const sampleLessons = [
+    { 
+      id: 'lesson1', 
+      title: 'Lesson 1: Chessboard & Pieces',
+      description: 'Learn the basics of the chessboard and how pieces are arranged',
+      difficulty: 'beginner' as const
+    },
+    { 
+      id: 'lesson2', 
+      title: 'Lesson 2: Piece Movement',
+      description: 'Master how each piece moves across the board',
+      difficulty: 'beginner' as const
+    },
+    { 
+      id: 'lesson3', 
+      title: 'Lesson 3: Check & Checkmate',
+      description: 'Understand the concepts of check and checkmate',
+      difficulty: 'beginner' as const
+    },
+    { 
+      id: 'lesson4', 
+      title: 'Lesson 4: Basic Openings',
+      description: 'Learn fundamental opening principles and strategies',
+      difficulty: 'intermediate' as const
+    },
+    { 
+      id: 'lesson5', 
+      title: 'Lesson 5: Tactical Combinations',
+      description: 'Master tactical patterns and combinations',
+      difficulty: 'intermediate' as const
+    }
   ];
 
   return (
@@ -290,6 +337,38 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+      <section style={{ margin: '3rem 0', padding: '2rem', background: '#23263a', borderRadius: 16 }}>
+        <h2 style={{ color: '#7fa7ff', marginBottom: 16 }}>Try a Lichess Puzzle</h2>
+        <div style={{ marginBottom: 16 }}>
+          <input
+            type="text"
+            value={lichessUrl}
+            onChange={e => setLichessUrl(e.target.value)}
+            placeholder="Paste a Lichess study or puzzle embed URL"
+            style={{ width: '100%', maxWidth: 500, padding: 8, borderRadius: 6, border: '1px solid #444', marginBottom: 8 }}
+          />
+        </div>
+        <LichessEmbed url={lichessUrl} />
+      </section>
+      <section style={{ margin: '3rem 0', padding: '2rem', background: '#23263a', borderRadius: 16 }}>
+        <h2 style={{ color: '#7fa7ff', marginBottom: 16 }}>Track Your Lesson Progress</h2>
+        <LessonProgressTracker 
+          lessons={sampleLessons} 
+          title="Your Learning Journey"
+          showProgressBar={true}
+        />
+      </section>
+      <section style={{ margin: '3rem 0', padding: '2rem', background: '#23263a', borderRadius: 16 }}>
+        <h2 style={{ color: '#7fa7ff', marginBottom: 16 }}>Stay Updated</h2>
+        <EmailSignupForm 
+          formEndpoint="https://formspree.io/f/mblywjkn"
+          title="Get Chess Tips & Updates"
+          subtitle="Join our community and receive exclusive chess lessons, opening strategies, and tactical puzzles directly to your inbox!"
+          placeholder="Enter your email address"
+          buttonText="Join the Community"
+          successMessage="Welcome to Checkza! You'll receive your first chess tip within 24 hours."
+        />
       </section>
     </div>
   );

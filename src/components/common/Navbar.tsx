@@ -15,6 +15,7 @@ const Navbar = () => {
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const [settingsOpen, setSettingsOpen] = React.useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,12 +67,18 @@ const Navbar = () => {
 
   const navItems = [
     { path: '/', label: 'Home', icon: '��' },
-    { path: '/how-to-play', label: 'How to Play', icon: '🎓' },
-    { path: '/openings', label: 'Openings', icon: '📖' },
-    { path: '/endgames', label: 'Endgames', icon: '🏁' },
+    { path: '/puzzles', label: 'Puzzles', icon: '🧩' },
     { path: '/resources', label: 'Resources', icon: '📚' },
     { path: '/analysis', label: 'Analysis', icon: '🔍' }
   ];
+
+  const dropdownItems = [
+    { path: '/how-to-play', label: 'How to Play', icon: '🎓' },
+    { path: '/openings', label: 'Openings', icon: '📖' },
+    { path: '/endgames', label: 'Endgames', icon: '🏁' }
+  ];
+
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   const mobileStats = [
     { number: '30+', label: 'Openings' },
@@ -104,6 +111,38 @@ const Navbar = () => {
                 <span className="cz-nav-label">{item.label}</span>
               </Link>
             ))}
+            
+            {/* Learn Dropdown */}
+            <div className="dropdown">
+              <button 
+                className="dropdown-toggle"
+                onClick={toggleDropdown}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+              >
+                <span className="cz-nav-icon">📚</span>
+                <span className="cz-nav-label">Lessons</span>
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              <div 
+                className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                {dropdownItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className="dropdown-item"
+                    onClick={() => {
+                      setIsDropdownOpen(false);
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    <span className="dropdown-icon">{item.icon}</span>
+                    <span className="dropdown-label">{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right Side */}
@@ -146,6 +185,34 @@ const Navbar = () => {
               <span className="cz-mobile-nav-label">{item.label}</span>
             </Link>
           ))}
+          
+          {/* Mobile Dropdown */}
+          <div className="mobile-dropdown">
+            <button 
+              className="mobile-dropdown-toggle"
+              onClick={toggleDropdown}
+            >
+              <span className="cz-mobile-nav-icon">📚</span>
+              <span className="cz-mobile-nav-label">Lessons</span>
+              <span className={`dropdown-arrow ${isDropdownOpen ? 'rotate' : ''}`}>▼</span>
+            </button>
+            <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+              {dropdownItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="mobile-dropdown-item"
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <span className="dropdown-icon">{item.icon}</span>
+                  <span className="dropdown-label">{item.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
           
           {/* Mobile Stats */}
           <div className="cz-mobile-stats">

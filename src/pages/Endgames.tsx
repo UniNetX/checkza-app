@@ -613,7 +613,7 @@ const Endgames: React.FC = () => {
                     <h2>{practicePosition.name}</h2>
                     <p>{practicePosition.description}</p>
                     <Chessboard
-                      position={practiceBoard}
+                      fen={practicePosition.fen}
                       orientation={practicePosition.fen.split(' ')[1] === 'w' ? 'white' : 'black'}
                       selectedSquare={selectedSquare}
                       onSquareSelect={handleSquareSelect}
@@ -805,7 +805,7 @@ const Endgames: React.FC = () => {
                         <div className="example-header"><strong>{pos.name}</strong></div>
                         <div className="example-board">
                           <Chessboard
-                            position={parseFen(pos.fen).board}
+                            fen={pos.fen}
                             orientation={pos.fen.split(' ')[1] === 'w' ? 'white' : 'black'}
                             disabled={true}
                             className="guide-chessboard"

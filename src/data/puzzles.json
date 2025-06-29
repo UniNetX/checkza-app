@@ -1,92 +1,128 @@
 [
   {
-    "id": "puzzle-1",
-    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4",
-    "moves": ["f3g5", "d8g5", "c4f7"],
-    "theme": ["tactic", "fork", "opening"],
-    "source": "Game: Morphy vs. Duke Karl, Paris 1858",
-    "explanation": "1. Nxe5! attacks f7 and threatens a fork. If Qxg5, then Bxf7# is mate.",
-    "rating": 1200
+    "id": "puzzle_1",
+    "theme": "tactics",
+    "rating": 1200,
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "solution": ["e2e4"],
+    "description": "White to move and control the center",
+    "moves": ["e2e4"]
   },
   {
-    "id": "puzzle-2",
-    "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/2N1PN2/PPP2PPP/R1BQKB1R w KQkq - 2 4",
-    "moves": ["c1d2", "f8d6", "f1d3"],
-    "theme": ["development", "opening"],
-    "source": "Game: Capablanca vs. Marshall, New York 1918",
-    "explanation": "Develop your pieces to good squares and prepare to castle.",
-    "rating": 900
+    "id": "puzzle_2",
+    "theme": "tactics",
+    "rating": 1300,
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+    "solution": ["e7e5"],
+    "description": "Black to move and respond to e4",
+    "moves": ["e7e5"]
   },
   {
-    "id": "puzzle-3",
-    "fen": "8/8/8/8/8/2k5/2P5/2K5 w - - 0 1",
-    "moves": ["c2c3", "c3c4", "c4c5", "c5c6", "c6c7", "c7c8Q"],
-    "theme": ["endgame", "promotion"],
-    "source": "Basic Endgame Study",
-    "explanation": "Push the pawn to promotion and win with the new queen.",
-    "rating": 700
+    "id": "puzzle_3",
+    "theme": "tactics",
+    "rating": 1400,
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+    "solution": ["g1f3"],
+    "description": "White to move and develop the knight",
+    "moves": ["g1f3"]
   },
   {
-    "id": "puzzle-4",
-    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
-    "moves": ["f3e5", "f6e4", "e5c6"],
-    "theme": ["tactic", "fork", "opening"],
-    "source": "Classical Opening Trap",
-    "explanation": "1. Nxe5! Nxe4? 2. Nxc6! wins a pawn and forks the queen and rook.",
-    "rating": 1100
+    "id": "puzzle_4",
+    "theme": "tactics",
+    "rating": 1100,
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+    "solution": ["b8c6"],
+    "description": "Black to move and develop the knight",
+    "moves": ["b8c6"]
   },
   {
-    "id": "puzzle-5",
-    "fen": "rnbqk2r/pppp1ppp/5n2/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
-    "moves": ["e1g1", "f8e8", "f1e1"],
-    "theme": ["development", "opening"],
-    "source": "Ruy Lopez Opening",
-    "explanation": "Castle early to protect your king and connect your rooks.",
-    "rating": 800
+    "id": "puzzle_5",
+    "theme": "tactics",
+    "rating": 1500,
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "solution": ["f1c4"],
+    "description": "White to move and develop the bishop",
+    "moves": ["f1c4"]
   },
   {
-    "id": "puzzle-6",
-    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 4",
-    "moves": ["d3d4", "e5d4", "f3d4"],
-    "theme": ["tactic", "center", "opening"],
-    "source": "Scotch Game",
-    "explanation": "1. d4! opens the center and attacks the e5 pawn. After exd4, Nxd4 recaptures with a strong central knight.",
-    "rating": 1000
+    "id": "puzzle_6",
+    "theme": "mate",
+    "rating": 1400,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 4 4",
+    "solution": ["f3e5"],
+    "description": "White to move and win material",
+    "moves": ["f3e5"]
   },
   {
-    "id": "puzzle-7",
-    "fen": "8/8/8/8/8/4k3/4P3/4K3 w - - 0 1",
-    "moves": ["e2e3", "e3e4", "e4e5", "e5e6", "e6e7", "e7e8Q"],
-    "theme": ["endgame", "promotion", "king and pawn"],
-    "source": "Basic King and Pawn Endgame",
-    "explanation": "Push the pawn to promotion. The key is to advance the pawn while keeping the enemy king at bay.",
-    "rating": 600
+    "id": "puzzle_7",
+    "theme": "fork",
+    "rating": 1300,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq - 0 4",
+    "solution": ["f6e4"],
+    "description": "Black to move and fork",
+    "moves": ["f6e4"]
   },
   {
-    "id": "puzzle-8",
-    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
-    "moves": ["c4f7", "e8f7", "f3e5"],
-    "theme": ["tactic", "sacrifice", "opening"],
-    "source": "Classical Opening Trap",
-    "explanation": "1. Bxf7+! Kxf7 2. Ne5+ wins the queen with a discovered attack.",
-    "rating": 1300
+    "id": "puzzle_8",
+    "theme": "pin",
+    "rating": 1100,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "solution": ["d2d4"],
+    "description": "White to move and control the center",
+    "moves": ["d2d4"]
   },
   {
-    "id": "puzzle-9",
-    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
-    "moves": ["f1c4", "f8c5", "b2b4"],
-    "theme": ["tactic", "pin", "opening"],
-    "source": "Giuoco Piano",
-    "explanation": "1. Bc4 develops with tempo, attacking f7. After Bc5, b4! pins the bishop to the king.",
-    "rating": 950
+    "id": "puzzle_9",
+    "theme": "endgame",
+    "rating": 1500,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3",
+    "solution": ["e5d4"],
+    "description": "Black to move and capture",
+    "moves": ["e5d4"]
   },
   {
-    "id": "puzzle-10",
-    "fen": "8/8/8/8/8/2k5/2P5/2K5 w - - 0 1",
-    "moves": ["c2c4", "c3c4", "c4c5", "c5c6", "c6c7", "c7c8Q"],
-    "theme": ["endgame", "promotion", "opposition"],
-    "source": "King and Pawn Endgame",
-    "explanation": "Use the opposition to advance the pawn. 1. c4! gains the opposition, allowing the pawn to promote.",
-    "rating": 750
+    "id": "puzzle_10",
+    "theme": "tactics",
+    "rating": 1600,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+    "solution": ["f3d4"],
+    "description": "White to move and recapture",
+    "moves": ["f3d4"]
+  },
+  {
+    "id": "puzzle_11",
+    "theme": "mate",
+    "rating": 1700,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4",
+    "solution": ["c6d4"],
+    "description": "Black to move and counter",
+    "moves": ["c6d4"]
+  },
+  {
+    "id": "puzzle_12",
+    "theme": "fork",
+    "rating": 1250,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3pP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+    "solution": ["e4e5"],
+    "description": "White to move and advance",
+    "moves": ["e4e5"]
+  },
+  {
+    "id": "puzzle_13",
+    "theme": "pin",
+    "rating": 1350,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4P3/8/8/PPP2PPP/RNBQKB1R b KQkq - 0 4",
+    "solution": ["f6e4"],
+    "description": "Black to move and block",
+    "moves": ["f6e4"]
+  },
+  {
+    "id": "puzzle_14",
+    "theme": "tactics",
+    "rating": 1450,
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4P3/8/8/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+    "solution": ["d2d4"],
+    "description": "White to move and control center",
+    "moves": ["d2d4"]
   }
 ] 

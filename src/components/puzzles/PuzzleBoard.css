@@ -1,0 +1,624 @@
+/* Modern Puzzle Board Styles */
+.puzzle-board {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(127, 167, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+  min-height: 600px;
+}
+
+.puzzle-board::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="chess" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="rgba(127,167,255,0.03)"/><rect x="10" y="10" width="10" height="10" fill="rgba(127,167,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23chess)"/></svg>');
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Header Section */
+.puzzle-header {
+  background: linear-gradient(135deg, rgba(127, 167, 255, 0.1) 0%, rgba(67, 233, 123, 0.1) 100%);
+  padding: 2rem;
+  border-bottom: 1px solid rgba(127, 167, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.puzzle-header h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #7fa7ff 0%, #43e97b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.puzzle-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.puzzle-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.puzzle-counter {
+  background: rgba(127, 167, 255, 0.1);
+  color: #7fa7ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 1px solid rgba(127, 167, 255, 0.3);
+  font-size: 0.9rem;
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, #7fa7ff 0%, #43e97b 100%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(127, 167, 255, 0.3);
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(127, 167, 255, 0.4);
+}
+
+/* Main Content */
+.puzzle-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  min-height: 500px;
+}
+
+/* Board Container */
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 400px;
+  justify-content: center;
+}
+
+.chessboard-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 167, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  min-width: 400px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chessboard-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7fa7ff, #43e97b, #ffd700, #ff6b6b);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Feedback Messages */
+.feedback {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  animation: feedbackSlide 0.5s ease-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feedback.correct {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  border: 2px solid #43e97b;
+}
+
+.feedback.incorrect {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+  color: #fff;
+  border: 2px solid #ff6b6b;
+}
+
+@keyframes feedbackSlide {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hint {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #ffc107;
+  animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Puzzle Info Panel */
+.puzzle-info {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 167, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.puzzle-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7fa7ff, #43e97b);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.puzzle-details {
+  margin-bottom: 2rem;
+}
+
+.puzzle-details h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.puzzle-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating-badge,
+.themes-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.rating-badge {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+}
+
+.themes-badge {
+  background: linear-gradient(135deg, #7fa7ff 0%, #667eea 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(127, 167, 255, 0.3);
+}
+
+.rating-badge:hover,
+.themes-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* Action Buttons */
+.puzzle-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.action-btn:hover::before {
+  left: 100%;
+}
+
+.hint-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.hint-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.solution-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.solution-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.walkthrough-btn {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+}
+
+.walkthrough-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(67, 233, 123, 0.4);
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #7fa7ff 0%, #43e97b 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(127, 167, 255, 0.3);
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(127, 167, 255, 0.4);
+}
+
+/* Stats Section */
+.stats-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(127, 167, 255, 0.2);
+}
+
+.stats-toggle {
+  background: rgba(127, 167, 255, 0.1);
+  color: #7fa7ff;
+  border: 1px solid rgba(127, 167, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.stats-toggle:hover {
+  background: rgba(127, 167, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: rgba(127, 167, 255, 0.05);
+  border: 1px solid rgba(127, 167, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7fa7ff;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(127, 167, 255, 0.2);
+  border-top: 4px solid #7fa7ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  color: #7fa7ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.error-container h3 {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.error-container p {
+  color: #b8c5d6;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Achievement Popup */
+.achievement-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out;
+}
+
+.achievement-content {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  border: 2px solid #ffc107;
+  animation: achievementBounce 0.6s ease-out;
+  min-width: 300px;
+}
+
+.achievement-icon {
+  font-size: 2rem;
+}
+
+.achievement-text {
+  font-size: 1.1rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes achievementBounce {
+  0% { transform: scale(0.3) rotate(-10deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .puzzle-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .puzzle-info {
+    order: -1;
+  }
+  
+  .chessboard-container {
+    min-width: 350px;
+    min-height: 350px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .puzzle-board {
+    border-radius: 16px;
+    padding: 0;
+  }
+  
+  .puzzle-header {
+    padding: 1.5rem;
+  }
+  
+  .puzzle-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .puzzle-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .puzzle-nav {
+    justify-content: center;
+  }
+  
+  .puzzle-content {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .chessboard-container {
+    padding: 1rem;
+    min-width: 300px;
+    min-height: 300px;
+  }
+  
+  .puzzle-info {
+    padding: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-popup {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .achievement-content {
+    flex-direction: column;
+    text-align: center;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .puzzle-header {
+    padding: 1rem;
+  }
+  
+  .puzzle-content {
+    padding: 1rem;
+  }
+  
+  .chessboard-container {
+    padding: 0.5rem;
+    min-width: 280px;
+    min-height: 280px;
+  }
+  
+  .puzzle-info {
+    padding: 1rem;
+  }
+  
+  .action-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Chessboard Specific Styles */
+.chessboard-container > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 400px !important;
+  min-height: 400px !important;
+}
+
+.chessboard-container canvas {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Ensure the chessboard is visible */
+.chessboard-container .react-chessboard {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 400px !important;
+  min-height: 400px !important;
+} 

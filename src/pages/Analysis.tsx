@@ -2,6 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import { Chess } from 'chess.js';
 import Chessboard from '../components/common/Chessboard';
 import './Analysis.css';
+import { generateFen } from '../utils/chess/fenUtils';
 
 interface MoveData {
   move: string;
@@ -224,37 +225,10 @@ const Analysis: React.FC = () => {
   const goBack = () => setCurrentMove(Math.max(0, currentMove - 1));
   const goForward = () => setCurrentMove(Math.min(gameData?.moves.length || 0, currentMove + 1));
 
-  // Convert FEN to position array for Chessboard component
-  const fenToPosition = (fen: string): (string | null)[][] => {
-    const parts = fen.split(' ');
-    const boardPart = parts[0];
-    const rows = boardPart.split('/');
-    
-    const position: (string | null)[][] = [];
-    
-    for (const row of rows) {
-      const boardRow: (string | null)[] = [];
-      for (const char of row) {
-        if (/\d/.test(char)) {
-          // Add empty squares
-          for (let i = 0; i < parseInt(char); i++) {
-            boardRow.push(null);
-          }
-        } else {
-          // Add piece
-          boardRow.push(char);
-        }
-      }
-      position.push(boardRow);
-    }
-    
-    return position;
-  };
-
-  const getCurrentPosition = () => {
-    if (!gameData) return fenToPosition('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
+  const getCurrentFen = () => {
+    if (!gameData) return 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
     const fen = gameData.positions[currentMove] || gameData.positions[0];
-    return fenToPosition(fen);
+    return fen;
   };
 
   const getMoveEvaluation = (move: MoveData) => {
@@ -397,7 +371,7 @@ const Analysis: React.FC = () => {
                 <h3>Position Analysis</h3>
                 <div className="board-container">
                   <Chessboard 
-                    position={getCurrentPosition()}
+                    fen={getCurrentFen()}
                     onMove={() => {}}
                     disabled={true}
                   />

@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom';
 import OpeningList from '../components/openings/OpeningList';
 import OpeningExplorer from '../components/openings/OpeningExplorer';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useAnalytics } from '../hooks/useAnalytics';
 import openingsData from '../data/openings.json';
 import './Openings.css';
 
 const Openings: React.FC = () => {
+  const { trackPageView, trackOpeningViewed, trackEvent } = useAnalytics();
+  
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('openings');
+  }, [trackPageView]);
+
   const [selectedOpening, setSelectedOpening] = useState<any>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
@@ -47,17 +55,53 @@ const Openings: React.FC = () => {
   const handleOpeningSelect = (opening: any) => {
     setSelectedOpening(opening);
     setViewMode('explorer');
+    
+    // Track opening viewed
+    trackOpeningViewed(opening.name);
   };
 
   const handleBackToList = () => {
     setSelectedOpening(null);
     setViewMode('list');
+    
+    // Track navigation back to list
+    trackEvent('opening_list_viewed');
+  };
+
+  const handleViewModeChange = (mode: 'list' | 'explorer') => {
+    setViewMode(mode);
+    
+    // Track view mode change
+    trackEvent('view_mode_changed', { mode });
+  };
+
+  const handleSearch = (term: string) => {
+    setSearchTerm(term);
+    
+    // Track search
+    if (term.length > 2) {
+      trackEvent('opening_search', { searchTerm: term });
+    }
+  };
+
+  const handleFilterChange = (filterType: string, value: string) => {
+    if (filterType === 'difficulty') {
+      setSelectedDifficulty(value);
+    } else if (filterType === 'theme') {
+      setSelectedTheme(value);
+    }
+    
+    // Track filter change
+    trackEvent('opening_filter_changed', { filterType, value });
   };
 
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedDifficulty('all');
     setSelectedTheme('all');
+    
+    // Track filter clear
+    trackEvent('opening_filters_cleared');
   };
 
   return (
@@ -105,7 +149,7 @@ const Openings: React.FC = () => {
               type="text"
               placeholder="Search openings..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => handleSearch(e.target.value)}
               className="search-input"
             />
             <span className="search-icon">🔍</span>
@@ -116,7 +160,7 @@ const Openings: React.FC = () => {
               <label>Difficulty:</label>
               <select
                 value={selectedDifficulty}
-                onChange={(e) => setSelectedDifficulty(e.target.value)}
+                onChange={(e) => handleFilterChange('difficulty', e.target.value)}
                 className="filter-select"
               >
                 {difficulties.map(difficulty => (
@@ -131,7 +175,7 @@ const Openings: React.FC = () => {
               <label>Theme:</label>
               <select
                 value={selectedTheme}
-                onChange={(e) => setSelectedTheme(e.target.value)}
+                onChange={(e) => handleFilterChange('theme', e.target.value)}
                 className="filter-select"
               >
                 {themes.map(theme => (
@@ -155,13 +199,13 @@ const Openings: React.FC = () => {
           <div className="view-toggle">
             <button
               className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
-              onClick={() => setViewMode('list')}
+              onClick={() => handleViewModeChange('list')}
             >
               📋 List View
             </button>
             <button
               className={`view-btn ${viewMode === 'explorer' ? 'active' : ''}`}
-              onClick={() => setViewMode('explorer')}
+              onClick={() => handleViewModeChange('explorer')}
             >
               🔍 Explorer
             </button>
@@ -217,7 +261,7 @@ const Openings: React.FC = () => {
             <div className="cta-buttons">
               <button 
                 className="cta-btn primary"
-                onClick={() => setViewMode('list')}
+                onClick={() => handleViewModeChange('list')}
               >
                 Explore Openings
               </button>

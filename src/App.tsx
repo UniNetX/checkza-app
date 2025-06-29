@@ -12,6 +12,7 @@ import Resources from './pages/Resources';
 import Analysis from './pages/Analysis';
 import HowToPlay from './pages/HowToPlay';
 import CurriculumKit from './pages/CurriculumKit';
+import Puzzles from './pages/Puzzles';
 import './App.css';
 
 // Page Transition Component
@@ -60,6 +61,7 @@ const AppContent = () => {
             <Route path="/analysis" element={<Analysis />} />
             <Route path="/how-to-play" element={<HowToPlay />} />
             <Route path="/curriculum-kit" element={<CurriculumKit />} />
+            <Route path="/puzzles" element={<Puzzles />} />
           </Routes>
         </PageTransition>
       </main>
