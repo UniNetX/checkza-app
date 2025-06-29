@@ -1,0 +1,758 @@
+[
+  {
+    "id": "ruy-lopez",
+    "name": "Ruy Lopez",
+    "eco": "C60-C99",
+    "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5"],
+    "description": "One of the oldest and most analyzed openings in chess. White develops the bishop to b5, pinning the knight and preparing to castle.",
+    "statistics": {
+      "whiteWinRate": 52.3,
+      "blackWinRate": 25.1,
+      "drawRate": 22.6,
+      "totalGames": 125000
+    },
+    "variations": [
+      {
+        "name": "Morphy Defense",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6"],
+        "description": "Black defends the e5 pawn and challenges the bishop."
+      },
+      {
+        "name": "Berlin Defense",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "g8f6"],
+        "description": "Black develops the knight to f6, preparing to castle and defend e5."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["development", "center control", "bishop pin"]
+  },
+  {
+    "id": "sicilian-defense",
+    "name": "Sicilian Defense",
+    "eco": "B20-B99",
+    "moves": ["e2e4", "c7c5"],
+    "description": "Black's most popular response to 1.e4. It creates an asymmetrical position and leads to sharp, tactical play.",
+    "statistics": {
+      "whiteWinRate": 45.2,
+      "blackWinRate": 32.8,
+      "drawRate": 22.0,
+      "totalGames": 180000
+    },
+    "variations": [
+      {
+        "name": "Najdorf Variation",
+        "moves": ["e2e4", "c7c5", "g1f3", "d7d6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "a7a6"],
+        "description": "One of the most complex and analyzed variations, favored by many top players."
+      },
+      {
+        "name": "Dragon Variation",
+        "moves": ["e2e4", "c7c5", "g1f3", "d7d6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "g7g6"],
+        "description": "Black fianchettoes the bishop, creating a sharp, tactical position."
+      }
+    ],
+    "difficulty": "advanced",
+    "themes": ["asymmetrical", "tactical", "counterplay"]
+  },
+  {
+    "id": "french-defense",
+    "name": "French Defense",
+    "eco": "C00-C19",
+    "moves": ["e2e4", "e7e6"],
+    "description": "A solid defense that leads to closed positions. Black prepares to challenge the center with d5.",
+    "statistics": {
+      "whiteWinRate": 48.7,
+      "blackWinRate": 28.9,
+      "drawRate": 22.4,
+      "totalGames": 95000
+    },
+    "variations": [
+      {
+        "name": "Winawer Variation",
+        "moves": ["e2e4", "e7e6", "d2d4", "d7d5", "b1c3", "f8b4"],
+        "description": "Black pins the knight, creating tactical opportunities."
+      },
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "e7e6", "d2d4", "d7d5", "b1c3", "g8f6"],
+        "description": "Black develops the knight to f6, maintaining flexibility."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["solid", "closed position", "pawn structure"]
+  },
+  {
+    "id": "kings-indian-defense",
+    "name": "King's Indian Defense",
+    "eco": "E60-E99",
+    "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "f8g7"],
+    "description": "A hypermodern opening where Black allows White to control the center with pawns, then attacks it.",
+    "statistics": {
+      "whiteWinRate": 46.8,
+      "blackWinRate": 30.2,
+      "drawRate": 23.0,
+      "totalGames": 85000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "f8g7", "e2e4", "d7d6", "g1f3", "e8g8"],
+        "description": "White establishes a strong center, Black prepares kingside attack."
+      },
+      {
+        "name": "Four Pawns Attack",
+        "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "f8g7", "e2e4", "d7d6", "f2f4"],
+        "description": "White creates a massive center, Black must counterattack."
+      }
+    ],
+    "difficulty": "advanced",
+    "themes": ["hypermodern", "kingside attack", "center counterplay"]
+  },
+  {
+    "id": "queens-gambit",
+    "name": "Queen's Gambit",
+    "eco": "D06-D69",
+    "moves": ["d2d4", "d7d5", "c2c4"],
+    "description": "White offers a pawn to gain control of the center. One of the most popular openings in chess.",
+    "statistics": {
+      "whiteWinRate": 49.1,
+      "blackWinRate": 27.3,
+      "drawRate": 23.6,
+      "totalGames": 140000
+    },
+    "variations": [
+      {
+        "name": "Queen's Gambit Accepted",
+        "moves": ["d2d4", "d7d5", "c2c4", "d5c4"],
+        "description": "Black accepts the gambit, leading to open play."
+      },
+      {
+        "name": "Queen's Gambit Declined",
+        "moves": ["d2d4", "d7d5", "c2c4", "e7e6"],
+        "description": "Black declines the gambit, maintaining solid position."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["gambit", "center control", "development"]
+  },
+  {
+    "id": "italian-game",
+    "name": "Italian Game",
+    "eco": "C50-C59",
+    "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4"],
+    "description": "A classic opening that develops the bishop to c4, attacking the f7 square.",
+    "statistics": {
+      "whiteWinRate": 51.8,
+      "blackWinRate": 26.4,
+      "drawRate": 21.8,
+      "totalGames": 110000
+    },
+    "variations": [
+      {
+        "name": "Giuoco Piano",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5"],
+        "description": "Both sides develop bishops to active squares."
+      },
+      {
+        "name": "Evans Gambit",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "b2b4"],
+        "description": "White sacrifices a pawn for rapid development and attack."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["development", "attack", "classical"]
+  },
+  {
+    "id": "caro-kann-defense",
+    "name": "Caro-Kann Defense",
+    "eco": "B10-B19",
+    "moves": ["e2e4", "c7c6"],
+    "description": "A solid defense that supports the d5 advance. Black avoids the complications of the Sicilian while maintaining good chances.",
+    "statistics": {
+      "whiteWinRate": 47.2,
+      "blackWinRate": 29.8,
+      "drawRate": 23.0,
+      "totalGames": 78000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "c7c6", "d2d4", "d7d5", "e4d5", "c6d5"],
+        "description": "Black recaptures with the c-pawn, maintaining solid structure."
+      },
+      {
+        "name": "Panov-Botvinnik Attack",
+        "moves": ["e2e4", "c7c6", "d2d4", "d7d5", "e4d5", "c6d5", "c2c4"],
+        "description": "White creates an IQP position with attacking chances."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["solid", "pawn structure", "positional"]
+  },
+  {
+    "id": "pirc-defense",
+    "name": "Pirc Defense",
+    "eco": "B07-B09",
+    "moves": ["e2e4", "d7d6", "d2d4", "g8f6", "b1c3", "g7g6"],
+    "description": "A hypermodern defense where Black allows White to control the center, then attacks it with pieces.",
+    "statistics": {
+      "whiteWinRate": 48.5,
+      "blackWinRate": 28.7,
+      "drawRate": 22.8,
+      "totalGames": 65000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "d7d6", "d2d4", "g8f6", "b1c3", "g7g6", "g1f3", "f8g7"],
+        "description": "Both sides develop naturally, Black prepares kingside attack."
+      },
+      {
+        "name": "Austrian Attack",
+        "moves": ["e2e4", "d7d6", "d2d4", "g8f6", "b1c3", "g7g6", "f2f4"],
+        "description": "White creates a strong center and kingside attack."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["hypermodern", "kingside attack", "flexible"]
+  },
+  {
+    "id": "scandinavian-defense",
+    "name": "Scandinavian Defense",
+    "eco": "B01",
+    "moves": ["e2e4", "d7d5"],
+    "description": "Black immediately challenges the e4 pawn. A direct approach that can lead to sharp play.",
+    "statistics": {
+      "whiteWinRate": 49.8,
+      "blackWinRate": 27.2,
+      "drawRate": 23.0,
+      "totalGames": 45000
+    },
+    "variations": [
+      {
+        "name": "Main Line",
+        "moves": ["e2e4", "d7d5", "e4d5", "d8d5"],
+        "description": "Black recaptures with the queen, developing early."
+      },
+      {
+        "name": "Modern Variation",
+        "moves": ["e2e4", "d7d5", "e4d5", "g8f6"],
+        "description": "Black develops the knight, maintaining flexibility."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["direct", "queen development", "tactical"]
+  },
+  {
+    "id": "english-opening",
+    "name": "English Opening",
+    "eco": "A10-A39",
+    "moves": ["c2c4"],
+    "description": "A flexible opening that can transpose into many other openings. White controls d5 and prepares for various setups.",
+    "statistics": {
+      "whiteWinRate": 48.9,
+      "blackWinRate": 28.3,
+      "drawRate": 22.8,
+      "totalGames": 85000
+    },
+    "variations": [
+      {
+        "name": "Symmetrical Variation",
+        "moves": ["c2c4", "c7c5"],
+        "description": "Black mirrors White's move, creating symmetrical position."
+      },
+      {
+        "name": "Reversed Sicilian",
+        "moves": ["c2c4", "e7e5"],
+        "description": "Black plays e5, creating a reversed Sicilian structure."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["flexible", "transpositional", "positional"]
+  },
+  {
+    "id": "dutch-defense",
+    "name": "Dutch Defense",
+    "eco": "A80-A99",
+    "moves": ["d2d4", "f7f5"],
+    "description": "Black immediately challenges White's center control with f5, preparing for kingside attack.",
+    "statistics": {
+      "whiteWinRate": 49.5,
+      "blackWinRate": 27.7,
+      "drawRate": 22.8,
+      "totalGames": 38000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["d2d4", "f7f5", "c2c4", "g8f6", "g1f3", "e7e6"],
+        "description": "Black develops naturally, preparing kingside attack."
+      },
+      {
+        "name": "Stonewall Variation",
+        "moves": ["d2d4", "f7f5", "c2c4", "g8f6", "g1f3", "e7e6", "b1c3", "f8e7", "e2e3", "e8g8", "f1d3", "d7d5"],
+        "description": "Black creates a solid pawn structure with attacking chances."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["kingside attack", "asymmetrical", "aggressive"]
+  },
+  {
+    "id": "grunfeld-defense",
+    "name": "Grünfeld Defense",
+    "eco": "D70-D99",
+    "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "d7d5"],
+    "description": "A hypermodern defense where Black allows White to control the center, then attacks it.",
+    "statistics": {
+      "whiteWinRate": 47.5,
+      "blackWinRate": 30.2,
+      "drawRate": 22.3,
+      "totalGames": 68000
+    },
+    "variations": [
+      {
+        "name": "Exchange Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "d7d5", "c4d5", "f6d5", "e2e4", "d5c3", "b2c3"],
+        "description": "White exchanges pawns, creating an IQP position."
+      },
+      {
+        "name": "Russian System",
+        "moves": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "d7d5", "g1f3", "f8g7", "c4d5", "f6d5"],
+        "description": "Black maintains the knight on d5 for pressure."
+      }
+    ],
+    "difficulty": "advanced",
+    "themes": ["hypermodern", "center counterplay", "dynamic"]
+  },
+  {
+    "id": "nimzo-indian-defense",
+    "name": "Nimzo-Indian Defense",
+    "eco": "E20-E59",
+    "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "b1c3", "f8b4"],
+    "description": "Black pins the knight and prepares to double White's c-pawns, creating long-term pressure.",
+    "statistics": {
+      "whiteWinRate": 47.8,
+      "blackWinRate": 29.5,
+      "drawRate": 22.7,
+      "totalGames": 72000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "b1c3", "f8b4", "d1c2"],
+        "description": "White protects the knight, avoiding doubled pawns."
+      },
+      {
+        "name": "Sämisch Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "b1c3", "f8b4", "a2a3"],
+        "description": "White accepts doubled pawns for attacking chances."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["pin", "doubled pawns", "positional"]
+  },
+  {
+    "id": "queens-indian-defense",
+    "name": "Queen's Indian Defense",
+    "eco": "E12-E19",
+    "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g1f3", "b7b6"],
+    "description": "Black prepares to fianchetto the bishop, creating a solid and flexible position.",
+    "statistics": {
+      "whiteWinRate": 48.2,
+      "blackWinRate": 28.8,
+      "drawRate": 23.0,
+      "totalGames": 58000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g1f3", "b7b6", "g2g3", "c8b7"],
+        "description": "Both sides fianchetto bishops, creating a strategic battle."
+      },
+      {
+        "name": "Petrosian Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g1f3", "b7b6", "a2a3"],
+        "description": "White prevents the bishop pin and prepares queenside expansion."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["fianchetto", "solid", "positional"]
+  },
+  {
+    "id": "catalan-opening",
+    "name": "Catalan Opening",
+    "eco": "E01-E09",
+    "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g2g3"],
+    "description": "White combines queenside expansion with kingside fianchetto, creating a harmonious setup.",
+    "statistics": {
+      "whiteWinRate": 49.2,
+      "blackWinRate": 27.8,
+      "drawRate": 23.0,
+      "totalGames": 52000
+    },
+    "variations": [
+      {
+        "name": "Open Catalan",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g2g3", "d7d5", "c4d5", "f6d5"],
+        "description": "Black recaptures with the knight, maintaining flexibility."
+      },
+      {
+        "name": "Closed Catalan",
+        "moves": ["d2d4", "g8f6", "c2c4", "e7e6", "g2g3", "d7d5", "b1c3"],
+        "description": "White maintains the tension in the center."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["fianchetto", "positional", "harmonious"]
+  },
+  {
+    "id": "trompowsky-attack",
+    "name": "Trompowsky Attack",
+    "eco": "A45",
+    "moves": ["d2d4", "g8f6", "c1g5"],
+    "description": "White immediately pins the knight, avoiding main line theory and creating unique positions.",
+    "statistics": {
+      "whiteWinRate": 48.8,
+      "blackWinRate": 28.4,
+      "drawRate": 22.8,
+      "totalGames": 28000
+    },
+    "variations": [
+      {
+        "name": "Classical Defense",
+        "moves": ["d2d4", "g8f6", "c1g5", "e7e6"],
+        "description": "Black develops naturally, preparing to castle."
+      },
+      {
+        "name": "Pseudo-Trompowsky",
+        "moves": ["d2d4", "g8f6", "c1g5", "f6e4"],
+        "description": "Black challenges the bishop immediately."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["pin", "avoiding theory", "unique"]
+  },
+  {
+    "id": "slav-defense",
+    "name": "Slav Defense",
+    "eco": "D10-D19",
+    "moves": ["d2d4", "d7d5", "c2c4", "c7c6"],
+    "description": "A solid defense that maintains the d5 pawn. Black avoids the isolated queen's pawn that can arise in the Queen's Gambit Declined.",
+    "statistics": {
+      "whiteWinRate": 48.5,
+      "blackWinRate": 28.7,
+      "drawRate": 22.8,
+      "totalGames": 62000
+    },
+    "variations": [
+      {
+        "name": "Semi-Slav",
+        "moves": ["d2d4", "d7d5", "c2c4", "c7c6", "b1c3", "e7e6"],
+        "description": "Black combines c6 and e6, creating a flexible structure."
+      },
+      {
+        "name": "Slav Accepted",
+        "moves": ["d2d4", "d7d5", "c2c4", "c7c6", "c4d5", "c6d5"],
+        "description": "Black recaptures with the c-pawn, maintaining solid structure."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["solid", "pawn structure", "positional"]
+  },
+  {
+    "id": "semi-slav-defense",
+    "name": "Semi-Slav Defense",
+    "eco": "D43-D49",
+    "moves": ["d2d4", "d7d5", "c2c4", "c7c6", "b1c3", "e7e6"],
+    "description": "A flexible defense that combines the solidity of the Slav with the dynamic possibilities of the Queen's Gambit Declined.",
+    "statistics": {
+      "whiteWinRate": 47.8,
+      "blackWinRate": 29.2,
+      "drawRate": 23.0,
+      "totalGames": 55000
+    },
+    "variations": [
+      {
+        "name": "Meran Variation",
+        "moves": ["d2d4", "d7d5", "c2c4", "c7c6", "b1c3", "e7e6", "e2e3", "g8f6", "g1f3", "b8d7", "f1d3", "d5c4"],
+        "description": "Black accepts the gambit, leading to sharp tactical play."
+      },
+      {
+        "name": "Anti-Meran",
+        "moves": ["d2d4", "d7d5", "c2c4", "c7c6", "b1c3", "e7e6", "e2e3", "g8f6", "g1f3", "b8d7", "c4d5"],
+        "description": "White exchanges pawns, avoiding the Meran complications."
+      }
+    ],
+    "difficulty": "advanced",
+    "themes": ["flexible", "tactical", "dynamic"]
+  },
+  {
+    "id": "kings-indian-attack",
+    "name": "King's Indian Attack",
+    "eco": "A07",
+    "moves": ["g1f3", "d7d5", "g2g3"],
+    "description": "White adopts a hypermodern setup with kingside fianchetto, preparing for kingside attack.",
+    "statistics": {
+      "whiteWinRate": 48.2,
+      "blackWinRate": 28.8,
+      "drawRate": 23.0,
+      "totalGames": 32000
+    },
+    "variations": [
+      {
+        "name": "Classical Defense",
+        "moves": ["g1f3", "d7d5", "g2g3", "g8f6", "f1g2", "c7c6"],
+        "description": "Black develops naturally, preparing queenside expansion."
+      },
+      {
+        "name": "Symmetrical Defense",
+        "moves": ["g1f3", "d7d5", "g2g3", "g8f6", "f1g2", "c7c5"],
+        "description": "Black mirrors White's setup, creating symmetrical position."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["hypermodern", "kingside attack", "fianchetto"]
+  },
+  {
+    "id": "larsen-opening",
+    "name": "Larsen Opening",
+    "eco": "A01",
+    "moves": ["b2b3"],
+    "description": "A hypermodern opening that prepares queenside fianchetto, avoiding main line theory.",
+    "statistics": {
+      "whiteWinRate": 47.5,
+      "blackWinRate": 29.5,
+      "drawRate": 23.0,
+      "totalGames": 18000
+    },
+    "variations": [
+      {
+        "name": "Classical Defense",
+        "moves": ["b2b3", "e7e5", "c1b2", "b8c6"],
+        "description": "Black develops naturally, preparing kingside attack."
+      },
+      {
+        "name": "Symmetrical Defense",
+        "moves": ["b2b3", "b7b6", "c1b2", "c8b7"],
+        "description": "Black mirrors White's setup, creating symmetrical position."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["hypermodern", "fianchetto", "avoiding theory"]
+  },
+  {
+    "id": "bird-opening",
+    "name": "Bird Opening",
+    "eco": "A02-A03",
+    "moves": ["f2f4"],
+    "description": "White immediately attacks the kingside, preparing for aggressive play and potential kingside attack.",
+    "statistics": {
+      "whiteWinRate": 48.8,
+      "blackWinRate": 28.4,
+      "drawRate": 22.8,
+      "totalGames": 15000
+    },
+    "variations": [
+      {
+        "name": "From Gambit",
+        "moves": ["f2f4", "e7e5", "f4e5", "d7d6"],
+        "description": "Black sacrifices a pawn for rapid development and attacking chances."
+      },
+      {
+        "name": "Classical Defense",
+        "moves": ["f2f4", "d7d5", "e2e3", "g8f6"],
+        "description": "Black develops naturally, preparing queenside expansion."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["aggressive", "kingside attack", "gambit"]
+  },
+  {
+    "id": "scotch-game",
+    "name": "Scotch Game",
+    "eco": "C44-C45",
+    "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4"],
+    "description": "White immediately challenges the center with d4, leading to open positions and tactical play.",
+    "statistics": {
+      "whiteWinRate": 50.2,
+      "blackWinRate": 26.8,
+      "drawRate": 23.0,
+      "totalGames": 42000
+    },
+    "variations": [
+      {
+        "name": "Scotch Gambit",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4", "e5d4", "f1c4"],
+        "description": "White sacrifices a pawn for rapid development and attack."
+      },
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4", "e5d4", "f3d4"],
+        "description": "White recaptures with the knight, maintaining control."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["open position", "tactical", "development"]
+  },
+  {
+    "id": "petroff-defense",
+    "name": "Petroff Defense",
+    "eco": "C42-C43",
+    "moves": ["e2e4", "e7e5", "g1f3", "g8f6"],
+    "description": "Black immediately challenges the knight, leading to symmetrical positions and solid play.",
+    "statistics": {
+      "whiteWinRate": 49.5,
+      "blackWinRate": 27.7,
+      "drawRate": 22.8,
+      "totalGames": 58000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "e7e5", "g1f3", "g8f6", "f3e5", "d7d6", "e5f3", "f6e4"],
+        "description": "Black recaptures the pawn, maintaining symmetry."
+      },
+      {
+        "name": "Steinitz Variation",
+        "moves": ["e2e4", "e7e5", "g1f3", "g8f6", "f3e5", "d7d6", "e5f3", "f6e4", "d2d4"],
+        "description": "White challenges the center immediately."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["symmetrical", "solid", "positional"]
+  },
+  {
+    "id": "philidor-defense",
+    "name": "Philidor Defense",
+    "eco": "C41",
+    "moves": ["e2e4", "e7e5", "g1f3", "d7d6"],
+    "description": "A solid but passive defense where Black supports the e5 pawn and prepares for kingside development.",
+    "statistics": {
+      "whiteWinRate": 51.2,
+      "blackWinRate": 25.8,
+      "drawRate": 23.0,
+      "totalGames": 28000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "e7e5", "g1f3", "d7d6", "d2d4", "g8f6"],
+        "description": "Black develops the knight, maintaining flexibility."
+      },
+      {
+        "name": "Hanham Variation",
+        "moves": ["e2e4", "e7e5", "g1f3", "d7d6", "d2d4", "b8d7"],
+        "description": "Black develops the knight to d7, preparing kingside attack."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["solid", "passive", "kingside attack"]
+  },
+  {
+    "id": "vienna-game",
+    "name": "Vienna Game",
+    "eco": "C25-C29",
+    "moves": ["e2e4", "e7e5", "b1c3"],
+    "description": "White develops the knight early, preparing for kingside attack and avoiding main line theory.",
+    "statistics": {
+      "whiteWinRate": 49.8,
+      "blackWinRate": 27.2,
+      "drawRate": 23.0,
+      "totalGames": 22000
+    },
+    "variations": [
+      {
+        "name": "Classical Variation",
+        "moves": ["e2e4", "e7e5", "b1c3", "g8f6", "f2f4"],
+        "description": "White creates a kingside attack with f4."
+      },
+      {
+        "name": "Falkbeer Variation",
+        "moves": ["e2e4", "e7e5", "b1c3", "g8f6", "g1f3"],
+        "description": "White develops naturally, maintaining flexibility."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["kingside attack", "avoiding theory", "development"]
+  },
+  {
+    "id": "bishops-opening",
+    "name": "Bishop's Opening",
+    "eco": "C23-C24",
+    "moves": ["e2e4", "e7e5", "f1c4"],
+    "description": "White develops the bishop to c4, attacking the f7 square and preparing for kingside attack.",
+    "statistics": {
+      "whiteWinRate": 50.5,
+      "blackWinRate": 26.7,
+      "drawRate": 22.8,
+      "totalGames": 18000
+    },
+    "variations": [
+      {
+        "name": "Classical Defense",
+        "moves": ["e2e4", "e7e5", "f1c4", "g8f6"],
+        "description": "Black develops the knight, defending f7 and preparing kingside attack."
+      },
+      {
+        "name": "Urusov Gambit",
+        "moves": ["e2e4", "e7e5", "f1c4", "g8f6", "d2d4"],
+        "description": "White sacrifices a pawn for rapid development and attack."
+      }
+    ],
+    "difficulty": "beginner",
+    "themes": ["kingside attack", "development", "gambit"]
+  },
+  {
+    "id": "kings-gambit",
+    "name": "King's Gambit",
+    "eco": "C30-C39",
+    "moves": ["e2e4", "e7e5", "f2f4"],
+    "description": "A romantic gambit where White sacrifices a pawn for rapid development and kingside attack.",
+    "statistics": {
+      "whiteWinRate": 48.2,
+      "blackWinRate": 28.8,
+      "drawRate": 23.0,
+      "totalGames": 25000
+    },
+    "variations": [
+      {
+        "name": "King's Gambit Accepted",
+        "moves": ["e2e4", "e7e5", "f2f4", "e5f4"],
+        "description": "Black accepts the gambit, leading to sharp tactical play."
+      },
+      {
+        "name": "Falkbeer Countergambit",
+        "moves": ["e2e4", "e7e5", "f2f4", "d7d5"],
+        "description": "Black counterattacks in the center, sacrificing a pawn."
+      }
+    ],
+    "difficulty": "intermediate",
+    "themes": ["gambit", "kingside attack", "tactical"]
+  },
+  {
+    "id": "benko-gambit",
+    "name": "Benko Gambit",
+    "eco": "A57-A59",
+    "moves": ["d2d4", "g8f6", "c2c4", "c7c5", "d4d5", "b7b5"],
+    "description": "Black sacrifices a pawn for queenside pressure and long-term positional compensation.",
+    "statistics": {
+      "whiteWinRate": 49.5,
+      "blackWinRate": 27.7,
+      "drawRate": 22.8,
+      "totalGames": 32000
+    },
+    "variations": [
+      {
+        "name": "Accepted Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "c7c5", "d4d5", "b7b5", "c4b5"],
+        "description": "White accepts the gambit, leading to queenside pressure."
+      },
+      {
+        "name": "Declined Variation",
+        "moves": ["d2d4", "g8f6", "c2c4", "c7c5", "d4d5", "b7b5", "c4b5", "a7a6", "b5a6"],
+        "description": "White maintains the extra pawn but faces queenside pressure."
+      }
+    ],
+    "difficulty": "advanced",
+    "themes": ["gambit", "queenside pressure", "positional"]
+  }
+] 

@@ -1,0 +1,22 @@
+.cz-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.cz-card:hover {
+  box-shadow: 0 12px 36px 0 var(--shadow), 0 2px 8px var(--shadow);
+  border: 1.5px solid var(--primary-color);
+  transform: translateY(-4px) scale(1.015);
+}
+
+.cz-card-accent {
+  border: 2.5px solid var(--primary-color);
+  box-shadow: 0 8px 32px 0 rgba(92, 184, 92, 0.18), 0 2px 8px rgba(92, 184, 92, 0.10);
+} 

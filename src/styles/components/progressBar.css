@@ -1,0 +1,102 @@
+.progress-bar-container {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-bar-wrapper {
+  position: relative;
+  height: 8px;
+  background: var(--card-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.progress-percentage {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Size variants */
+.progress-bar-container.small .progress-bar-wrapper {
+  height: 4px;
+}
+
+.progress-bar-container.small .progress-percentage {
+  font-size: 0.625rem;
+}
+
+.progress-bar-container.large .progress-bar-wrapper {
+  height: 12px;
+}
+
+.progress-bar-container.large .progress-percentage {
+  font-size: 0.875rem;
+}
+
+/* Color variants */
+.progress-bar-container.primary .progress-bar-fill {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
+}
+
+.progress-bar-container.success .progress-bar-fill {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progress-bar-container.warning .progress-bar-fill {
+  background: linear-gradient(90deg, var(--accent-color), #fde68a);
+}
+
+.progress-bar-container.danger .progress-bar-fill {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+/* Hover effects */
+.progress-bar-wrapper:hover {
+  transform: scaleY(1.1);
+  transition: transform 0.2s ease;
+}
+
+.progress-bar-wrapper:hover .progress-bar-fill {
+  filter: brightness(1.1);
+} 

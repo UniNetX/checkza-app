@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #60a5fa; /* blue-400 */
+  --primary-color-light: #93c5fd; /* blue-300 */
+  --accent-color: #eab308; /* yellow-400 */
+  --background: #181a1b;
+  --background-glass: rgba(24,26,27,0.92);
+  --text-primary: #f1f5f9;
+  --text-secondary: #bdbdbd;
+  --card-bg: #23272e;
+  --border-color: #232a2e;
+  --nav-bg: #181a1b;
+  --nav-text: #f1f5f9;
+  --button-bg: #2563eb; /* blue-600 */
+  --button-text: #f1f5f9;
+  --button-bg-hover: #1d4ed8; /* blue-700 */
+  --shadow: 0 8px 32px rgba(0,0,0,0.32);
+  --transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+[data-theme='dark'] {
+  --primary-color: #60a5fa;
+  --primary-color-light: #93c5fd;
+  --accent-color: #eab308;
+  --background: #181a1b;
+  --background-glass: rgba(24,26,27,0.92);
+  --text-primary: #f1f5f9;
+  --text-secondary: #bdbdbd;
+  --card-bg: #23272e;
+  --border-color: #232a2e;
+  --nav-bg: #181a1b;
+  --nav-text: #f1f5f9;
+  --button-bg: #2563eb;
+  --button-text: #f1f5f9;
+  --button-bg-hover: #1d4ed8;
+  --shadow: 0 8px 32px rgba(0,0,0,0.32);
+}
+
+html, body {
+  background: var(--background);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+* {
+  transition: var(--transition);
+} 

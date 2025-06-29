@@ -1,0 +1,92 @@
+[
+  {
+    "id": "puzzle-1",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4",
+    "moves": ["f3g5", "d8g5", "c4f7"],
+    "theme": ["tactic", "fork", "opening"],
+    "source": "Game: Morphy vs. Duke Karl, Paris 1858",
+    "explanation": "1. Nxe5! attacks f7 and threatens a fork. If Qxg5, then Bxf7# is mate.",
+    "rating": 1200
+  },
+  {
+    "id": "puzzle-2",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/2N1PN2/PPP2PPP/R1BQKB1R w KQkq - 2 4",
+    "moves": ["c1d2", "f8d6", "f1d3"],
+    "theme": ["development", "opening"],
+    "source": "Game: Capablanca vs. Marshall, New York 1918",
+    "explanation": "Develop your pieces to good squares and prepare to castle.",
+    "rating": 900
+  },
+  {
+    "id": "puzzle-3",
+    "fen": "8/8/8/8/8/2k5/2P5/2K5 w - - 0 1",
+    "moves": ["c2c3", "c3c4", "c4c5", "c5c6", "c6c7", "c7c8Q"],
+    "theme": ["endgame", "promotion"],
+    "source": "Basic Endgame Study",
+    "explanation": "Push the pawn to promotion and win with the new queen.",
+    "rating": 700
+  },
+  {
+    "id": "puzzle-4",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+    "moves": ["f3e5", "f6e4", "e5c6"],
+    "theme": ["tactic", "fork", "opening"],
+    "source": "Classical Opening Trap",
+    "explanation": "1. Nxe5! Nxe4? 2. Nxc6! wins a pawn and forks the queen and rook.",
+    "rating": 1100
+  },
+  {
+    "id": "puzzle-5",
+    "fen": "rnbqk2r/pppp1ppp/5n2/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+    "moves": ["e1g1", "f8e8", "f1e1"],
+    "theme": ["development", "opening"],
+    "source": "Ruy Lopez Opening",
+    "explanation": "Castle early to protect your king and connect your rooks.",
+    "rating": 800
+  },
+  {
+    "id": "puzzle-6",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 4",
+    "moves": ["d3d4", "e5d4", "f3d4"],
+    "theme": ["tactic", "center", "opening"],
+    "source": "Scotch Game",
+    "explanation": "1. d4! opens the center and attacks the e5 pawn. After exd4, Nxd4 recaptures with a strong central knight.",
+    "rating": 1000
+  },
+  {
+    "id": "puzzle-7",
+    "fen": "8/8/8/8/8/4k3/4P3/4K3 w - - 0 1",
+    "moves": ["e2e3", "e3e4", "e4e5", "e5e6", "e6e7", "e7e8Q"],
+    "theme": ["endgame", "promotion", "king and pawn"],
+    "source": "Basic King and Pawn Endgame",
+    "explanation": "Push the pawn to promotion. The key is to advance the pawn while keeping the enemy king at bay.",
+    "rating": 600
+  },
+  {
+    "id": "puzzle-8",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+    "moves": ["c4f7", "e8f7", "f3e5"],
+    "theme": ["tactic", "sacrifice", "opening"],
+    "source": "Classical Opening Trap",
+    "explanation": "1. Bxf7+! Kxf7 2. Ne5+ wins the queen with a discovered attack.",
+    "rating": 1300
+  },
+  {
+    "id": "puzzle-9",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+    "moves": ["f1c4", "f8c5", "b2b4"],
+    "theme": ["tactic", "pin", "opening"],
+    "source": "Giuoco Piano",
+    "explanation": "1. Bc4 develops with tempo, attacking f7. After Bc5, b4! pins the bishop to the king.",
+    "rating": 950
+  },
+  {
+    "id": "puzzle-10",
+    "fen": "8/8/8/8/8/2k5/2P5/2K5 w - - 0 1",
+    "moves": ["c2c4", "c3c4", "c4c5", "c5c6", "c6c7", "c7c8Q"],
+    "theme": ["endgame", "promotion", "opposition"],
+    "source": "King and Pawn Endgame",
+    "explanation": "Use the opposition to advance the pawn. 1. c4! gains the opposition, allowing the pawn to promote.",
+    "rating": 750
+  }
+] 
