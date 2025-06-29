@@ -66,16 +66,17 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { path: '/', label: 'Home', icon: '��' },
-    { path: '/puzzles', label: 'Puzzles', icon: '🧩' },
-    { path: '/resources', label: 'Resources', icon: '📚' },
-    { path: '/analysis', label: 'Analysis', icon: '🔍' }
+    { path: '/', label: 'Home', icon: '🏠' },
+    { path: '/dashboard', label: 'Dashboard', icon: '📊' },
   ];
 
   const dropdownItems = [
     { path: '/how-to-play', label: 'How to Play', icon: '🎓' },
     { path: '/openings', label: 'Openings', icon: '📖' },
-    { path: '/endgames', label: 'Endgames', icon: '🏁' }
+    { path: '/endgames', label: 'Endgames', icon: '🏁' },
+    { path: '/puzzles', label: 'Puzzles', icon: '🧩' },
+    { path: '/resources', label: 'Resources', icon: '📚' },
+    { path: '/analysis', label: 'Analysis', icon: '🔍' },
   ];
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -148,6 +149,7 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="cz-navbar-right">
             <ThemeToggle />
+            <Link to="/signin" className="cz-navbar-auth-btn">Sign In / Sign Up</Link>
             
             {/* Mobile Menu Button */}
             <button
@@ -213,6 +215,8 @@ const Navbar = () => {
               ))}
             </div>
           </div>
+          
+          <Link to="/signin" className="cz-navbar-auth-btn cz-navbar-auth-btn-mobile">Sign In / Sign Up</Link>
           
           {/* Mobile Stats */}
           <div className="cz-mobile-stats">

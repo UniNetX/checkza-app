@@ -47,94 +47,60 @@ const Footer = () => {
   return (
     <footer className="cz-footer">
       <div className="cz-footer-container">
-        {/* Main Footer Content */}
-        <div className="cz-footer-content">
-          {/* Brand Section */}
-          <div className="cz-footer-brand">
+        <div className="cz-footer-content cz-footer-modern">
+          {/* Brand & Social */}
+          <div className="cz-footer-brand cz-footer-modern-brand">
             <div className="cz-footer-logo">
               <span className="cz-logo-icon">♟️</span>
               <span className="cz-logo-text">Checkza</span>
             </div>
-            <p className="cz-footer-tagline">
-              Master chess with comprehensive training and analysis tools. 
-              Join thousands of players improving their game with our structured learning platform.
+            <p className="cz-footer-tagline cz-footer-modern-tagline">
+              Master chess with structured lessons, real puzzles, and progress tracking. Join thousands leveling up their game with Checkza.
             </p>
-            <div className="cz-footer-social">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="cz-social-link"
-                  aria-label={link.label}
-                  title={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
+            <div className="cz-footer-social cz-footer-modern-social">
+              <a href="#" className="cz-social-link" aria-label="Twitter" title="Twitter">🐦</a>
+              <a href="#" className="cz-social-link" aria-label="Discord" title="Discord">💬</a>
+              <a href="#" className="cz-social-link" aria-label="GitHub" title="GitHub">💻</a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="cz-footer-links">
-            <h3 className="cz-footer-section-title">Quick Links</h3>
-            <ul className="cz-footer-links-list">
-              {footerLinks.slice(0, 3).map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="cz-footer-link"
-                  >
-                    <span className="cz-link-icon">{link.icon}</span>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* More Links */}
-          <div className="cz-footer-links">
-            <h3 className="cz-footer-section-title">More</h3>
-            <ul className="cz-footer-links-list">
-              {footerLinks.slice(3).map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="cz-footer-link"
-                  >
-                    <span className="cz-link-icon">{link.icon}</span>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Links */}
+          <div className="cz-footer-modern-links">
+            <div className="cz-footer-links-group">
+              <h3 className="cz-footer-section-title">Quick Links</h3>
+              <ul className="cz-footer-links-list">
+                <li><Link to="/" className="cz-footer-link"><span className="cz-link-icon">🏠</span>Home</Link></li>
+                <li><Link to="/openings" className="cz-footer-link"><span className="cz-link-icon">📖</span>Openings</Link></li>
+                <li><Link to="/endgames" className="cz-footer-link"><span className="cz-link-icon">🏁</span>Endgames</Link></li>
+                <li><Link to="/resources" className="cz-footer-link"><span className="cz-link-icon">📚</span>Resources</Link></li>
+                <li><Link to="/analysis" className="cz-footer-link"><span className="cz-link-icon">🔍</span>Analysis</Link></li>
+                <li><Link to="/how-to-play" className="cz-footer-link"><span className="cz-link-icon">🎓</span>How to Play</Link></li>
+              </ul>
+            </div>
+            <div className="cz-footer-links-group">
+              <h3 className="cz-footer-section-title">Legal</h3>
+              <ul className="cz-footer-links-list">
+                <li><Link to="/privacy" className="cz-footer-link">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="cz-footer-link">Terms of Service</Link></li>
+                <li><Link to="/cookies" className="cz-footer-link">Cookie Policy</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="cz-footer-bottom">
-          <div className="cz-footer-bottom-content">
-            <p className="cz-copyright">
-              © {currentYear} Checkza. All rights reserved.
-            </p>
-            <div className="cz-footer-bottom-links">
-              <Link to="/privacy" className="cz-footer-bottom-link">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="cz-footer-bottom-link">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="cz-footer-bottom-link">
-                Cookie Policy
-              </Link>
-            </div>
+        <div className="cz-footer-bottom cz-footer-modern-bottom">
+          <div className="cz-footer-bottom-content cz-footer-modern-bottom-content">
+            <span className="cz-copyright">© {currentYear} Checkza</span>
+            <span className="cz-footer-bottom-sep">·</span>
+            <span className="cz-footer-built">Built with ♟️ for chess lovers everywhere</span>
           </div>
         </div>
       </div>
 
-      {/* Back to Top Button */}
+      {/* Back to Top Button - Modern, Subtle */}
       <button 
-        className={`cz-back-to-top ${showBackToTop ? 'visible' : ''}`}
+        className={`cz-back-to-top cz-footer-modern-backtotop ${showBackToTop ? 'visible' : ''}`}
         onClick={scrollToTop}
         aria-label="Back to top"
         title="Back to top"

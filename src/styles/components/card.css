@@ -1,22 +1,22 @@
 .cz-card {
   background: var(--card-bg);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 2px solid var(--border-color);
   padding: 2rem 1.5rem;
-  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  transition: all var(--transition-base);
   color: var(--text-primary);
   position: relative;
   overflow: hidden;
 }
 
 .cz-card:hover {
-  box-shadow: 0 12px 36px 0 var(--shadow), 0 2px 8px var(--shadow);
-  border: 1.5px solid var(--primary-color);
-  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
 }
 
 .cz-card-accent {
-  border: 2.5px solid var(--primary-color);
-  box-shadow: 0 8px 32px 0 rgba(92, 184, 92, 0.18), 0 2px 8px rgba(92, 184, 92, 0.10);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.15), 0 2px 8px rgba(37, 99, 235, 0.1);
 } 

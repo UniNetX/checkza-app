@@ -360,4 +360,49 @@
   background: #38f9d7;
   color: #181c24;
   box-shadow: 0 4px 24px 0 #43e97b88;
+}
+
+/* How It Works Card Number Fix and Design Improvement */
+.cz-step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  justify-content: flex-start;
+}
+.cz-step-number {
+  position: static !important;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #232a2e;
+  color: #7fa7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 0.5rem 0 0;
+  box-shadow: 0 2px 8px rgba(67, 233, 123, 0.08);
+  border: 2px solid #7fa7ff;
+  z-index: 1;
+}
+.cz-howitworks-card {
+  background: #23263a !important;
+  border: 2px solid #232a2e !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 24px 0 #10121a !important;
+  padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: visible;
+}
+.cz-howitworks-card:hover {
+  box-shadow: 0 8px 32px 0 #232a2e, 0 0 0 2px #7fa7ff;
+  border: 2px solid #43e97b !important;
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
 } 

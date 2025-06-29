@@ -13,7 +13,9 @@ import Analysis from './pages/Analysis';
 import HowToPlay from './pages/HowToPlay';
 import CurriculumKit from './pages/CurriculumKit';
 import Puzzles from './pages/Puzzles';
+import SignIn from './pages/SignIn';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 // Page Transition Component
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
@@ -62,6 +64,7 @@ const AppContent = () => {
             <Route path="/how-to-play" element={<HowToPlay />} />
             <Route path="/curriculum-kit" element={<CurriculumKit />} />
             <Route path="/puzzles" element={<Puzzles />} />
+            <Route path="/signin" element={<SignIn />} />
           </Routes>
         </PageTransition>
       </main>
@@ -76,6 +79,7 @@ const App = () => {
       <Router>
         <AppContent />
       </Router>
+      <Analytics />
     </ThemeProvider>
   );
 };

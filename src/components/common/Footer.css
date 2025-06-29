@@ -629,4 +629,115 @@
     background: none !important;
     transform: none !important;
   }
+}
+
+/* Modern Footer Layout & UI Improvements */
+.cz-footer-modern {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 4rem 0 2.5rem 0;
+}
+.cz-footer-modern-brand {
+  flex: 1.2;
+  min-width: 220px;
+  margin-right: 2.5rem;
+}
+.cz-footer-modern-tagline {
+  font-size: 1.13rem;
+  color: #cbd5e1;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.cz-footer-modern-social {
+  margin-top: 1.2rem;
+  gap: 1.2rem;
+}
+.cz-footer-modern-links {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  min-width: 220px;
+  justify-content: flex-end;
+}
+.cz-footer-links-group {
+  min-width: 120px;
+}
+.cz-footer-modern-bottom {
+  border-top: 1.5px solid #232a2e;
+  margin-top: 2.5rem;
+  padding: 1.2rem 0 0.5rem 0;
+  background: none;
+}
+.cz-footer-modern-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.01rem;
+  color: #b3b8d0;
+  font-weight: 500;
+}
+.cz-footer-bottom-sep {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+.cz-footer-built {
+  color: #7fa7ff;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+.cz-footer-modern-backtotop {
+  right: 2.5rem;
+  bottom: 2.5rem;
+  background: #232a2e;
+  color: #7fa7ff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 12px #232a2e33;
+  opacity: 0.85;
+  border: 1.5px solid #232a2e;
+  transition: all 0.18s;
+}
+.cz-footer-modern-backtotop:hover {
+  background: #3b82f6;
+  color: #fff;
+  opacity: 1;
+  border-color: #3b82f6;
+}
+@media (max-width: 900px) {
+  .cz-footer-modern {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem 0 1.5rem 0;
+  }
+  .cz-footer-modern-links {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    min-width: 0;
+  }
+  .cz-footer-modern-brand {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .cz-footer-modern-bottom-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.98rem;
+  }
+  .cz-footer-modern-backtotop {
+    right: 1.2rem;
+    bottom: 1.2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 } 
