@@ -2,26 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://checkza-app.vercel.app/</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/lessons</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/puzzles</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/openings</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/endgames</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/resources</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/dashboard</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://checkza-app.vercel.app/howtoplay</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset> 
